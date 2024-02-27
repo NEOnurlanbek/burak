@@ -13,6 +13,6 @@
         }
 
     },
-    "include": ["src/**/*.ts"],
+    "include": ["src/**/*.ts", "src/router.ts"],
     "exclude": ["node_modules"]
 }
