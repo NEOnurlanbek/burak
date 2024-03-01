@@ -5,6 +5,11 @@
     class => PASCAL
     folder => KEBAB
     css => SNAKE
-  - Erorr
+  - Erorr handling
 
+ */
+/* 
+Traditonal Api
+Rest Api
+GraphQl Api
  */
