@@ -1,16 +1,32 @@
  console.log("ishga tushdi tushyapti");
-// H - task
+// I - task
+function getDigits(inputString: string): string {
+    const digitsArray: string[] = inputString.split('').filter(char => /\d/.test(char));
+    const resultString: string = digitsArray.join('');
 
-function getPositive(numbers: number[]): string {
-    const positiveNumbers = numbers.filter(num => num > 0);
-    const positiveString = positiveNumbers.join('');
-
-    return positiveString;
+    return resultString;
 }
 
-const inputArray: number[] = [1, -4, 2];
-const result: string = getPositive(inputArray);
+// Test qilish
+const inputString: string = "m14i1t";
+const result: string = getDigits(inputString);
 console.log(result); 
+
+
+
+
+// H - task
+
+// function getPositive(numbers: number[]): string {
+//     const positiveNumbers = numbers.filter(num => num > 0);
+//     const positiveString = positiveNumbers.join('');
+
+//     return positiveString;
+// }
+
+// const inputArray: number[] = [1, -4, 2];
+// const result: string = getPositive(inputArray);
+// console.log(result); 
 
 
 
