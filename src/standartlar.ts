@@ -13,3 +13,8 @@ Traditonal Api
 Rest Api
 GraphQl Api
  */
+
+/* 
+Traditonal FD => BSSR => EJS
+Modern FD => SPA => REACT
+ */
