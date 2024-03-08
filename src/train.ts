@@ -1,16 +1,41 @@
- console.log("ishga tushdi tushyapti");
-// I - task
-function getDigits(inputString: string): string {
-    const digitsArray: string[] = inputString.split('').filter(char => /\d/.test(char));
-    const resultString: string = digitsArray.join('');
+//  console.log("ishga tushdi tushyapti");
+// J- task
 
-    return resultString;
+function findLongestWord(inputString: string): string {
+    const words: string[] = inputString.split(' ');
+    let longestWord: string = '';
+
+    for (const word of words) {
+        if (word.length > longestWord.length) {
+            longestWord = word;
+        }
+    }
+
+    return longestWord;
 }
 
-// Test qilish
-const inputString: string = "m14i1t";
-const result: string = getDigits(inputString);
-console.log(result); 
+const inputString: string = "I come from Uzbekistan";
+const result: string = findLongestWord(inputString);
+console.log(result);
+
+
+
+
+// I - task
+
+
+
+// function getDigits(inputString: string): string {
+//     const digitsArray: string[] = inputString.split('').filter(char => /\d/.test(char));
+//     const resultString: string = digitsArray.join('');
+
+//     return resultString;
+// }
+
+// // Test qilish
+// const inputString: string = "m14i1t";
+// const result: string = getDigits(inputString);
+// console.log(result); 
 
 
 
