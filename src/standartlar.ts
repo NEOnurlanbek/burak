@@ -18,3 +18,8 @@ GraphQl Api
 Traditonal FD => BSSR => EJS
 Modern FD => SPA => REACT
  */
+
+/*
+ request join
+ self updeat 
+ */

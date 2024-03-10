@@ -1,22 +1,42 @@
-//  console.log("ishga tushdi tushyapti");
-// J- task
+ console.log("ishga tushdi tushyapti");
+//K- task
+function countVowels(inputString: string): number {
+    const vowels = "aeiouAEIOU";
+    let vowelCount = 0;
 
-function findLongestWord(inputString: string): string {
-    const words: string[] = inputString.split(' ');
-    let longestWord: string = '';
-
-    for (const word of words) {
-        if (word.length > longestWord.length) {
-            longestWord = word;
+    for (const char of inputString) {
+        if (vowels.includes(char)) {
+            vowelCount++;
         }
     }
 
-    return longestWord;
+    return vowelCount;
 }
 
-const inputString: string = "I come from Uzbekistan";
-const result: string = findLongestWord(inputString);
+// Test qilish
+const inputString: string = "string";
+const result: number = countVowels(inputString);
 console.log(result);
+
+
+// J- task
+
+// function findLongestWord(inputString: string): string {
+//     const words: string[] = inputString.split(' ');
+//     let longestWord: string = '';
+
+//     for (const word of words) {
+//         if (word.length > longestWord.length) {
+//             longestWord = word;
+//         }
+//     }
+
+//     return longestWord;
+// }
+
+// const inputString: string = "I come from Uzbekistan";
+// const result: string = findLongestWord(inputString);
+// console.log(result);
 
 
 
