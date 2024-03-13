@@ -1,22 +1,40 @@
  console.log("ishga tushdi tushyapti");
-//K- task
-function countVowels(inputString: string): number {
-    const vowels = "aeiouAEIOU";
-    let vowelCount = 0;
+//- task
+function getSquareNumbers(numbers: number[]): { number: number, square: number }[] {
+    const result: { number: number, square: number }[] = [];
 
-    for (const char of inputString) {
-        if (vowels.includes(char)) {
-            vowelCount++;
-        }
+    for (const num of numbers) {
+        const square = num * num;
+        const obj = { number: num, square: square };
+        result.push(obj);
     }
 
-    return vowelCount;
+    return result;
 }
 
-// Test qilish
-const inputString: string = "string";
-const result: number = countVowels(inputString);
+const inputNumbers: number[] = [1, 2, 3];
+const result = getSquareNumbers(inputNumbers);
 console.log(result);
+
+
+
+ //K- task
+// function countVowels(inputString: string): number {
+//     const vowels = "aeiouAEIOU";
+//     let vowelCount = 0;
+
+//     for (const char of inputString) {
+//         if (vowels.includes(char)) {
+//             vowelCount++;
+//         }
+//     }
+
+//     return vowelCount;
+// }
+
+// const inputString: string = "string";
+// const result: number = countVowels(inputString);
+// console.log(result);
 
 
 // J- task
