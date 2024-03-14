@@ -1,20 +1,31 @@
  console.log("ishga tushdi tushyapti");
-//- task
+//L - task
 function getSquareNumbers(numbers: number[]): { number: number, square: number }[] {
-    const result: { number: number, square: number }[] = [];
-
-    for (const num of numbers) {
-        const square = num * num;
-        const obj = { number: num, square: square };
-        result.push(obj);
-    }
-
-    return result;
+    return numbers.map(num => ({ number: num, square: num * num }));
 }
 
 const inputNumbers: number[] = [1, 2, 3];
 const result = getSquareNumbers(inputNumbers);
-console.log(result);
+console.log(result); 
+
+
+
+
+// function getSquareNumbers(numbers: number[]): { number: number, square: number }[] {
+//     const result: { number: number, square: number }[] = [];
+
+//     for (const num of numbers) {
+//         const square = num * num;
+//         const obj = { number: num, square: square };
+//         result.push(obj);
+//     }
+
+//     return result;
+// }
+
+// const inputNumbers: number[] = [1, 2, 3];
+// const result = getSquareNumbers(inputNumbers);
+// console.log(result);
 
 
 
