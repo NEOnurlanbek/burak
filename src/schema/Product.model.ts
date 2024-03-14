@@ -15,7 +15,7 @@ const productSchema = new Schema({
         required: true,
     },
 
-    poductName: {
+    productName: {
         type: String,
         required: true,
     },
@@ -37,18 +37,17 @@ const productSchema = new Schema({
     },
 
     productVolume: {
-        type: String,
+        type: Number,
         enum: ProductVolume,
         default: ProductVolume.ONE,
     },
 
     productDesc: {
         type: String,
-        required: true,
     },
 
-    productImage: {
-        type: String,
+    productImages: {
+        type: [String],
         default: []
     },
 
