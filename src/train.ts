@@ -1,12 +1,25 @@
  console.log("ishga tushdi tushyapti");
-//L - task
-function getSquareNumbers(numbers: number[]): { number: number, square: number }[] {
-    return numbers.map(num => ({ number: num, square: num * num }));
+//N - task
+
+function isPalindrome(soz: string): boolean {
+    const sozlar: string = soz.split('').reverse().join('');
+    
+    return soz === sozlar;
 }
 
-const inputNumbers: number[] = [1, 2, 3];
-const result = getSquareNumbers(inputNumbers);
-console.log(result); 
+console.log(isPalindrome("non")); 
+console.log(isPalindrome("mit")); 
+
+
+//L - task
+
+// function getSquareNumbers(numbers: number[]): { number: number, square: number }[] {
+//     return numbers.map(num => ({ number: num, square: num * num }));
+// }
+
+// const inputNumbers: number[] = [1, 2, 3];
+// const result = getSquareNumbers(inputNumbers);
+// console.log(result); 
 
 
 
