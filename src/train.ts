@@ -1,17 +1,16 @@
  console.log("ishga tushdi tushyapti");
 // O - task
-function calculateSumOfNumbers(arr: any[]): number {
-    let sum: number = 0;
+function calculateSumOfNumbers(arr: any[]) {
+    let sum = 0;
     for (let i = 0; i < arr.length; i++) {
-        if (typeof arr[i] === 'number' && !isNaN(arr[i])) {
+        if (typeof arr[i] === "number") {
+            console.log(i);
             sum += arr[i];
-        } else if (typeof arr[i] === 'string' && !isNaN(parseFloat(arr[i]))) {
-            sum += parseFloat(arr[i]);
         }
     }
     return sum;
 }
-console.log(calculateSumOfNumbers([10, "10", {son: 10}, true, 25])); 
+console.log(calculateSumOfNumbers([10, "10", {son: 10}, true, 35])); 
 
 
 
