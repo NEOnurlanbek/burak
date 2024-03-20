@@ -1,14 +1,37 @@
  console.log("ishga tushdi tushyapti");
+// O - task
+function calculateSumOfNumbers(arr: (number | string | boolean)[]): number {
+    let ozgar: number = 0;
+
+    for (const element of arr) {
+        if (typeof element === 'number') {
+            ozgar += element;
+        } else if (typeof element === 'string') {
+            const num = parseInt(element);
+            if (!isNaN(num)) {
+                ozgar += num;
+            }
+        }
+    }
+
+    return ozgar;
+}
+console.log(calculateSumOfNumbers([10,  true, 35]));
+
+
+
+
+
 //N - task
 
-function isPalindrome(soz: string): boolean {
-    const sozlar: string = soz.split('').reverse().join('');
+// function isPalindrome(soz: string): boolean {
+//     const sozlar: string = soz.split('').reverse().join('');
     
-    return soz === sozlar;
-}
+//     return soz === sozlar;
+// }
 
-console.log(isPalindrome("non")); 
-console.log(isPalindrome("mit")); 
+// console.log(isPalindrome("non")); 
+// console.log(isPalindrome("mit")); 
 
 
 //L - task
