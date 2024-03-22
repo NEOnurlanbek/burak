@@ -1,15 +1,26 @@
  console.log("ishga tushdi tushyapti");
-// O - task
-function calculateSumOfNumbers(arr: any[]) {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        if (typeof arr[i] === "number"){
-            sum += arr[i];
-        }
-    }
-    return sum;
+// p - task
+function objectToArray(o: { [key: string]: any }) {
+    return Object.entries(o);
 }
-console.log(calculateSumOfNumbers([10, "10", {son: 10}, true, 35])); 
+
+const result = objectToArray({a: 10, b: 20});
+console.log(result); 
+
+
+
+
+// O - task
+// function calculateSumOfNumbers(arr: any[]) {
+//     let sum = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (typeof arr[i] === "number"){
+//             sum += arr[i];
+//         }
+//     }
+//     return sum;
+// }
+// console.log(calculateSumOfNumbers([10, "10", {son: 10}, true, 35])); 
 
 
 
