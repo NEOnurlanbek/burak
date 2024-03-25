@@ -1,11 +1,19 @@
  console.log("ishga tushdi tushyapti");
-// p - task
-function objectToArray(o: { [key: string]: any }) {
-    return Object.entries(o);
+// Q - task
+function hasProperty(obj: { [key: string]: any }, key: string){
+    return obj.hasOwnProperty(key);
 }
 
-const result = objectToArray({a: 10, b: 20});
-console.log(result); 
+console.log(hasProperty({name: "BMW", model: "M3"}, "model")); 
+console.log(hasProperty({name: "BMW", model: "M3"}, "year")); 
+
+// p - task
+// function objectToArray(o: { [key: string]: any }) {
+//     return Object.entries(o);
+// }
+
+// const result = objectToArray({a: 10, b: 20});
+// console.log(result); 
 
 
 
