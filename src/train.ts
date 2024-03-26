@@ -1,11 +1,23 @@
  console.log("ishga tushdi tushyapti");
-// Q - task
-function hasProperty(obj: { [key: string]: any }, key: string){
-    return obj.hasOwnProperty(key);
+// R - task
+function calculate(str: string) {
+    const parts: string[] = str.split('+');
+
+    const sum: number = parts.reduce((acc, curr) => acc + parseInt(curr), 0);
+    
+    return sum;
 }
 
-console.log(hasProperty({name: "BMW", model: "M3"}, "model")); 
-console.log(hasProperty({name: "BMW", model: "M3"}, "year")); 
+console.log(calculate("1+3"));
+
+// Q - task
+
+// function hasProperty(obj: { [key: string]: any }, key: string){
+//     return obj.hasOwnProperty(key);
+// }
+
+// console.log(hasProperty({name: "BMW", model: "M3"}, "model")); 
+// console.log(hasProperty({name: "BMW", model: "M3"}, "year")); 
 
 // p - task
 // function objectToArray(o: { [key: string]: any }) {
