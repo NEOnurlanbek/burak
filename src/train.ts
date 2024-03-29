@@ -1,14 +1,24 @@
  console.log("ishga tushdi tushyapti");
-// R - task
-function calculate(str: string) {
-    const parts: string[] = str.split('+');
+// S - task
+function missingNumber(numbers: number[]){
+    const numm: number = numbers.length;
+    const expectedSum: number = (numm * (numm + 1)) / 2;
+    const actualSum: number = numbers.reduce((acc, curr) => acc + curr, 0);
 
-    const sum: number = parts.reduce((acc, curr) => acc + parseInt(curr), 0);
-    
-    return sum;
+    return expectedSum - actualSum;
 }
+console.log(missingNumber([3, 0, 1])); 
 
-console.log(calculate("1+3"));
+// R - task
+// function calculate(str: string) {
+//     const parts: string[] = str.split('+');
+
+//     const sum: number = parts.reduce((acc, curr) => acc + parseInt(curr), 0);
+    
+//     return sum;
+// }
+
+// console.log(calculate("1+3"));
 
 // Q - task
 
