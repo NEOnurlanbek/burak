@@ -1,13 +1,24 @@
  console.log("ishga tushdi tushyapti");
-// S - task
-function missingNumber(numbers: number[]){
-    const numm: number = numbers.length;
-    const expectedSum: number = (numm * (numm + 1)) / 2;
-    const actualSum: number = numbers.reduce((acc, curr) => acc + curr, 0);
+// Q - task
+function calculate(yozuv: string) {
+    const parts: string[] = yozuv.split('+')
+    const sum: number = parts.reduce((acc, curr) => acc + parseInt(curr), 0);
 
-    return expectedSum - actualSum;
+    return sum;
 }
-console.log(missingNumber([3, 0, 1])); 
+
+console.log(calculate("1+3")); 
+
+
+// S - task
+// function missingNumber(numbers: number[]){
+//     const numm: number = numbers.length;
+//     const expectedSum: number = (numm * (numm + 1)) / 2;
+//     const actualSum: number = numbers.reduce((acc, curr) => acc + curr, 0);
+
+//     return expectedSum - actualSum;
+// }
+// console.log(missingNumber([3, 0, 1])); 
 
 // R - task
 // function calculate(str: string) {
