@@ -1,13 +1,27 @@
  console.log("ishga tushdi tushyapti");
-// Q - task
-function calculate(yozuv: string) {
-    const parts: string[] = yozuv.split('+')
-    const sum: number = parts.reduce((acc, curr) => acc + parseInt(curr), 0);
+// U - task
+function toqsonlar(n: number) {
+    let count: number = 0;
 
-    return sum;
+    for (let i = 2; i <= n; i += 2) {
+        count++;
+    }
+
+    return count;
 }
 
-console.log(calculate("1+3")); 
+console.log(toqsonlar(9)); 
+console.log(toqsonlar(11)); 
+ 
+// Q - task
+// function calculate(yozuv: string) {
+//     const parts: string[] = yozuv.split('+')
+//     const sum: number = parts.reduce((acc, curr) => acc + parseInt(curr), 0);
+
+//     return sum;
+// }
+
+// console.log(calculate("1+3")); 
 
 
 // S - task
