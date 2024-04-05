@@ -1,50 +1,68 @@
  console.log("ishga tushdi tushyapti");
-// U - task
-function toqsonlar(n: number) {
-    let count: number = 0;
+// v - task
+function countChars(str: string): { [key: string]: number } {
+    const charCounts: { [key: string]: number } = {};
 
-    for (let i = 2; i <= n; i += 2) {
-        count++;
-    }
-
-    return count;
-}
-
-console.log(toqsonlar(9)); 
-console.log(toqsonlar(11)); 
-
-//T -task
-function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
-    let mergedArray: number[] = [];
-
-    let i: number = 0;
-    let j: number = 0;
-
-    while (i < arr1.length && j < arr2.length) {
-        if (arr1[i] < arr2[j]) {
-            mergedArray.push(arr1[i]);
-            i++;
+    for (const char of str) {
+        if (charCounts[char]) {
+            charCounts[char]++;
         } else {
-            mergedArray.push(arr2[j]);
-            j++;
+            charCounts[char] = 1;
         }
     }
 
-    while (i < arr1.length) {
-        mergedArray.push(arr1[i]);
-        i++;
-    }
-
-    while (j < arr2.length) {
-        mergedArray.push(arr2[j]);
-        j++;
-    }
-
-    return mergedArray;
+    return charCounts;
 }
 
+console.log(countChars("hello")); 
 
-console.log(mergeSortedArrays([0, 3, 4, 31], [4, 6, 30])); 
+
+// U - task
+// function toqsonlar(n: number) {
+//     let count: number = 0;
+
+//     for (let i = 2; i <= n; i += 2) {
+//         count++;
+//     }
+
+//     return count;
+// }
+
+// console.log(toqsonlar(9)); 
+// console.log(toqsonlar(11)); 
+
+//T -task
+// function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
+//     let mergedArray: number[] = [];
+
+//     let i: number = 0;
+//     let j: number = 0;
+
+//     while (i < arr1.length && j < arr2.length) {
+//         if (arr1[i] < arr2[j]) {
+//             mergedArray.push(arr1[i]);
+//             i++;
+//         } else {
+//             mergedArray.push(arr2[j]);
+//             j++;
+//         }
+//     }
+
+//     while (i < arr1.length) {
+//         mergedArray.push(arr1[i]);
+//         i++;
+//     }
+
+//     while (j < arr2.length) {
+//         mergedArray.push(arr2[j]);
+//         j++;
+//     }
+
+//     return mergedArray;
+// }
+
+
+// console.log(mergeSortedArrays([0, 3, 4, 31], [4, 6, 30])); 
 
  
 // Q - task
