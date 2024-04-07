@@ -1,20 +1,20 @@
  console.log("ishga tushdi tushyapti");
 // v - task
-function countChars(str: string): { [key: string]: number } {
-    const charCounts: { [key: string]: number } = {};
+// function countChars(str: string): { [key: string]: number } {
+//     const charCounts: { [key: string]: number } = {};
 
-    for (const char of str) {
-        if (charCounts[char]) {
-            charCounts[char]++;
-        } else {
-            charCounts[char] = 1;
-        }
-    }
+//     for (const char of str) {
+//         if (charCounts[char]) {
+//             charCounts[char]++;
+//         } else {
+//             charCounts[char] = 1;
+//         }
+//     }
 
-    return charCounts;
-}
+//     return charCounts;
+// }
 
-console.log(countChars("hello")); 
+// console.log(countChars("hello")); 
 
 
 // U - task
@@ -259,10 +259,10 @@ console.log(countChars("hello"));
 
 
 
- // function getReverse(str: string): string {
-//     return str.split('').reverse().join('');
-// }
+ function getReverse(str: string){
+    return str.split('').reverse().join('');
+}
 
-// const originalString: string = "hello";
-// const reversedString: string = getReverse(originalString);
-// console.log(reversedString); 
+const originalString: string = "hello";
+const reversedString: string = getReverse(originalString);
+console.log(reversedString); 
