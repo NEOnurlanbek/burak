@@ -2,9 +2,14 @@ import express from "express";
 const router = express.Router();
 import memberController from "./controllers/member.controller";
 
+/** MEMBER */
+
 router
-.post('/login', memberController.login);
+.post('/member/login', memberController.login);
 router
-.post("/signup", memberController.signup);
+.post("/member/signup", memberController.signup);
+router.get("/member/detail", memberController.verifyAuth);
+
+/** PRODUCT*/
 
 export default router;
