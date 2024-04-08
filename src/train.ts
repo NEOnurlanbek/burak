@@ -1,4 +1,21 @@
  console.log("ishga tushdi tushyapti");
+// W - task
+
+function chunkArray(arr: any[], size: number): any[][] {
+    const chunkedArray: any[][] = [];
+    let index: number = 0;
+
+    while (index < arr.length) {
+        chunkedArray.push(arr.slice(index, index + size));
+        index += size;
+    }
+
+    return chunkedArray;
+}
+
+
+console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3)); 
+
 // v - task
 // function countChars(str: string): { [key: string]: number } {
 //     const charCounts: { [key: string]: number } = {};
@@ -259,10 +276,10 @@
 
 
 
- function getReverse(str: string){
-    return str.split('').reverse().join('');
-}
+//  function getReverse(str: string){
+//     return str.split('').reverse().join('');
+// }
 
-const originalString: string = "hello";
-const reversedString: string = getReverse(originalString);
-console.log(reversedString); 
+// const originalString: string = "hello";
+// const reversedString: string = getReverse(originalString);
+// console.log(reversedString); 
