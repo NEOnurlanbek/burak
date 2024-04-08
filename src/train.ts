@@ -1,20 +1,39 @@
  console.log("ishga tushdi tushyapti");
-// W - task
-
-function chunkArray(arr: any[], size: number): any[][] {
-    const chunkedArray: any[][] = [];
-    let index: number = 0;
-
-    while (index < arr.length) {
-        chunkedArray.push(arr.slice(index, index + size));
-        index += size;
+// X - task
+function countOccurrences(obj: any, key: string): number {
+    let count: number = 0;
+    for (const prop in obj) {
+        if (obj.hasOwnProperty(prop)) {
+            if (typeof obj[prop] === 'string' && prop === key) {
+                count++;
+            }
+            else if (typeof obj[prop] === 'object') {
+                count += countOccurrences(obj[prop], key);
+            }
+        }
     }
 
-    return chunkedArray;
+    return count;
 }
+console.log(countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model')); 
 
 
-console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3)); 
+// W - task
+
+// function chunkArray(arr: any[], size: number): any[][] {
+//     const chunkedArray: any[][] = [];
+//     let index: number = 0;
+
+//     while (index < arr.length) {
+//         chunkedArray.push(arr.slice(index, index + size));
+//         index += size;
+//     }
+
+//     return chunkedArray;
+// }
+
+
+// console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3)); 
 
 // v - task
 // function countChars(str: string): { [key: string]: number } {
