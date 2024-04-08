@@ -4,13 +4,22 @@ import Errors, { HttpCode, Message } from "../libs/Errors"
 import { MemberStatus, MemberType } from "../libs/enums/member.enum";
 import * as bcrypt from "bcryptjs";
 import { shapIntoMongooseObjectId } from "../libs/config";
+
 class MemberService {
     private readonly memberModel;
+
     constructor() {
         this.memberModel = MemberModel;
     }
 
     /** SPA */
+
+    public async getRestaurant(): Promise<Member> {
+        const result = await this.memberModel.findOne({memberType: MemberType.RESTAURANT }).lean().exec();
+        if(!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
+        result.target = "Test";
+        return result;
+    }
 
     public async signup(input: MemberInput): Promise<Member> {
         const salt = await bcrypt.genSalt();
