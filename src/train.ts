@@ -1,21 +1,34 @@
  console.log("ishga tushdi tushyapti");
-// X - task
-function countOccurrences(obj: any, key: string): number {
-    let count: number = 0;
-    for (const prop in obj) {
-        if (obj.hasOwnProperty(prop)) {
-            if (typeof obj[prop] === 'string' && prop === key) {
-                count++;
-            }
-            else if (typeof obj[prop] === 'object') {
-                count += countOccurrences(obj[prop], key);
-            }
+// Y - task
+function findIntersection(arr1: any[], arr2: any[]): any[] {
+    const intersection: any[] = [];
+    const set1 = new Set(arr1);
+    for (const value of arr2) {
+        if (set1.has(value)) {
+            intersection.push(value);
         }
     }
 
-    return count;
+    return intersection;
 }
-console.log(countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model')); 
+console.log(findIntersection([1, 2, 3], [3, 2, 0]));
+// X - task
+// function countOccurrences(obj: any, key: string): number {
+//     let count: number = 0;
+//     for (const prop in obj) {
+//         if (obj.hasOwnProperty(prop)) {
+//             if (typeof obj[prop] === 'string' && prop === key) {
+//                 count++;
+//             }
+//             else if (typeof obj[prop] === 'object') {
+//                 count += countOccurrences(obj[prop], key);
+//             }
+//         }
+//     }
+
+//     return count;
+// }
+// console.log(countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model')); 
 
 
 // W - task
