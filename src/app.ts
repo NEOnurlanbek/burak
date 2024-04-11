@@ -20,20 +20,20 @@ const store = new MongoDBStore({
 const app = express();
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/uploads", express.static("./uploads"));
-app.use(express.urlencoded({extended: true}));
-app.use(express.json());
-app.use(cookieParser());
+app.use(express.urlencoded({extended: true})); // html formatdan kelgan malumotlarga qabul qiladi
+app.use(express.json()); //
+app.use(cookieParser()); // hosil qilgan tokkenimizni brauzerni cookisiga saxranit qilishga
 app.use(morgan(MORGAN_FORMAT));
 
 /** 2- SESSIONS **/
 app.use(
     session({
-        secret:String(process.env.SESSION_SECRET),
+        secret:String(process.env.SESSION_SECRET), // => secretni .env filedan olyapmiz
   cookie: {
-    maxAge: 1000 * 3600* 3, // 3h
+    maxAge: 1000 * 3600* 6, // 6 soat => cookini qancha vaqt saqlanishini belgilaymiz
   },
-  store: store,
-  resave: true,    //10:30 auth => 13:30  12:00
+  store: store, //=> store ga biz yuqorida yasagan mongoDB dagi sessions collectionini beryapmiz.
+  resave: true,    // => cookimiz 6 soat mobaynida saqlanar edi agar "resave : true " bolsa shu oraliqda user kirgan bolsa kirgan vaqtidan yana 6 soat hisob lanadi. folse bolsa ozgarmasdan birinchi kirgan vaqtidan hisoblanadi
   saveUninitialized: true
     })
 );
