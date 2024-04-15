@@ -1,17 +1,33 @@
  console.log("ishga tushdi tushyapti");
-// Y - task
-function findIntersection(arr1: any[], arr2: any[]): any[] {
-    const intersection: any[] = [];
-    const set1 = new Set(arr1);
-    for (const value of arr2) {
-        if (set1.has(value)) {
-            intersection.push(value);
+// z - task
+
+function sumEvens(arr: number[]): number {
+    let sum: number = 0;
+    for (const num of arr) {
+        if (num % 2 === 0) {
+            sum += num;
         }
     }
 
-    return intersection;
+    return sum;
 }
-console.log(findIntersection([1, 2, 3], [3, 2, 0]));
+
+
+console.log(sumEvens([1, 2, 3]));
+
+// Y - task
+// function findIntersection(arr1: any[], arr2: any[]): any[] {
+//     const intersection: any[] = [];
+//     const set1 = new Set(arr1);
+//     for (const value of arr2) {
+//         if (set1.has(value)) {
+//             intersection.push(value);
+//         }
+//     }
+
+//     return intersection;
+// }
+// console.log(findIntersection([1, 2, 3], [3, 2, 0]));
 // X - task
 // function countOccurrences(obj: any, key: string): number {
 //     let count: number = 0;
