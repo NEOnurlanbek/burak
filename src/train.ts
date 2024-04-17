@@ -1,19 +1,28 @@
  console.log("ishga tushdi tushyapti");
-// z - task
+ // za - task
 
-function sumEvens(arr: number[]): number {
-    let sum: number = 0;
-    for (const num of arr) {
-        if (num % 2 === 0) {
-            sum += num;
-        }
-    }
-
-    return sum;
+ function sortByAge(arr: { age: number }[]): { age: number }[] {
+    return arr.sort((a, b) => a.age - b.age);
 }
 
 
-console.log(sumEvens([1, 2, 3]));
+console.log(sortByAge([{ age: 23 }, { age: 21 }, { age: 13 }])); 
+
+// z - task
+
+// function sumEvens(arr: number[]): number {
+//     let sum: number = 0;
+//     for (const num of arr) {
+//         if (num % 2 === 0) {
+//             sum += num;
+//         }
+//     }
+
+//     return sum;
+// }
+
+
+// console.log(sumEvens([1, 2, 3]));
 
 // Y - task
 // function findIntersection(arr1: any[], arr2: any[]): any[] {
