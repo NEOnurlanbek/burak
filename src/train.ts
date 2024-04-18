@@ -1,12 +1,21 @@
  console.log("ishga tushdi tushyapti");
- // za - task
-
- function sortByAge(arr: { age: number }[]): { age: number }[] {
-    return arr.sort((a, b) => a.age - b.age);
+//zb - task 
+function randomtop(num:number, numb:number) {
+ return Math.floor(Math.random() * (numb * num)) + num;
 }
 
+const javob = randomtop(3,80);
 
-console.log(sortByAge([{ age: 23 }, { age: 21 }, { age: 13 }])); 
+console.log("result =>", javob);
+
+ // za - task
+
+//  function sortByAge(arr: { age: number }[]): { age: number }[] {
+//     return arr.sort((a, b) => a.age - b.age);
+// }
+
+
+// console.log(sortByAge([{ age: 23 }, { age: 21 }, { age: 13 }])); 
 
 // z - task
 
