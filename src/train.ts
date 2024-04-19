@@ -1,12 +1,11 @@
  console.log("ishga tushdi tushyapti");
 //zb - task 
-function randomtop(num:number, numb:number) {
- return Math.floor(Math.random() * (numb * num)) + num;
+function randomBetween(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-const javob = randomtop(3,80);
 
-console.log("result =>", javob);
+console.log(randomBetween(30, 50));
 
  // za - task
 
