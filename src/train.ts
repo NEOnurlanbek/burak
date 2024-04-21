@@ -1,11 +1,20 @@
  console.log("ishga tushdi tushyapti");
-//zb - task 
-function randomBetween(min: number, max: number): number {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+//zc - task 
+ function celsiusToFahrenheit(celsius: number): number {
+    return (celsius * 9 / 5) + 32;
 }
 
 
-console.log(randomBetween(30, 50));
+console.log(celsiusToFahrenheit(0));
+
+
+//zb - task 
+// function randomBetween(min: number, max: number): number {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+
+
+// console.log(randomBetween(30, 50));
 
  // za - task
 
