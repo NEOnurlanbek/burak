@@ -1,5 +1,4 @@
-
-import exp from 'constants';
+import cors from "cors";
 import express from 'express';
 import path from 'path';
 import router from "./router";
@@ -22,6 +21,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/uploads", express.static("./uploads"));
 app.use(express.urlencoded({extended: true})); // html formatdan kelgan malumotlarga qabul qiladi
 app.use(express.json()); //
+app.use(cors({ credentials: true, origin: true }));
 app.use(cookieParser()); // hosil qilgan tokkenimizni brauzerni cookisiga saxranit qilishga
 app.use(morgan(MORGAN_FORMAT));
 
