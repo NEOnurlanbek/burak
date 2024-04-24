@@ -1,11 +1,21 @@
  console.log("ishga tushdi tushyapti");
-//zc - task 
- function celsiusToFahrenheit(celsius: number): number {
-    return (celsius * 9 / 5) + 32;
+// zd - task
+ function changeNumberInArray(index: number, arr: number[], newNumber: number): number[] {
+    arr[index] = newNumber;
+    return arr;
 }
 
 
-console.log(celsiusToFahrenheit(0));
+console.log(changeNumberInArray(1, [1, 3, 7, 2], 2)); 
+
+
+//zc - task 
+//  function celsiusToFahrenheit(celsius: number): number {
+//     return (celsius * 9 / 5) + 32;
+// }
+
+
+// console.log(celsiusToFahrenheit(0));
 
 
 //zb - task 
