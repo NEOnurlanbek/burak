@@ -1,12 +1,28 @@
  console.log("ishga tushdi tushyapti");
-// zd - task
- function changeNumberInArray(index: number, arr: number[], newNumber: number): number[] {
-    arr[index] = newNumber;
-    return arr;
+
+ function removeDuplicate(str: string): string {
+    let result: string = '';
+
+    for (const char of str) {
+        if (!result.includes(char)) {
+            result += char;
+        }
+    }
+
+    return result;
 }
 
+console.log(removeDuplicate('stringg')); 
 
-console.log(changeNumberInArray(1, [1, 3, 7, 2], 2)); 
+
+// zd - task
+//  function changeNumberInArray(index: number, arr: number[], newNumber: number): number[] {
+//     arr[index] = newNumber;
+//     return arr;
+// }
+
+
+// console.log(changeNumberInArray(1, [1, 3, 7, 2], 2)); 
 
 
 //zc - task 
