@@ -1,18 +1,34 @@
  console.log("ishga tushdi tushyapti");
-//ZE-TASK:
- function removeDuplicate(str: string): string {
-    let result: string = '';
 
-    for (const char of str) {
-        if (!result.includes(char)) {
-            result += char;
+ //ZF-TASK:
+ function capitalizeWords(sentence: string): string {
+    return sentence.replace(/\w+/g, (word) => {
+        if (word.length > 2) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        } else {
+            return word;
         }
-    }
-
-    return result;
+    });
 }
 
-console.log(removeDuplicate('stringg')); 
+console.log(capitalizeWords('name should be a string')); 
+console.log(capitalizeWords('hi there')); 
+
+
+//ZE-TASK:
+//  function removeDuplicate(str: string): string {
+//     let result: string = '';
+
+//     for (const char of str) {
+//         if (!result.includes(char)) {
+//             result += char;
+//         }
+//     }
+
+//     return result;
+// }
+
+// console.log(removeDuplicate('stringg')); 
 
 
 // zd - task
