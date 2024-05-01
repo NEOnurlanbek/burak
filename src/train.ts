@@ -1,18 +1,27 @@
  console.log("ishga tushdi tushyapti");
+//ZG-TASK:
 
- //ZF-TASK:
- function capitalizeWords(sentence: string): string {
-    return sentence.replace(/\w+/g, (word) => {
-        if (word.length > 2) {
-            return word.charAt(0).toUpperCase() + word.slice(1);
-        } else {
-            return word;
-        }
-    });
+function stringToSnakeCase(input: string): string {
+    return input.toLowerCase().replace(/\s+/g, '_');
 }
 
-console.log(capitalizeWords('name should be a string')); 
-console.log(capitalizeWords('hi there')); 
+console.log(stringToSnakeCase('name should be a string'));
+console.log(stringToSnakeCase('This is a Test String')); 
+
+
+ //ZF-TASK:
+//  function capitalizeWords(sentence: string): string {
+//     return sentence.replace(/\w+/g, (word) => {
+//         if (word.length > 2) {
+//             return word.charAt(0).toUpperCase() + word.slice(1);
+//         } else {
+//             return word;
+//         }
+//     });
+// }
+
+// console.log(capitalizeWords('name should be a string')); 
+// console.log(capitalizeWords('hi there')); 
 
 
 //ZE-TASK:
