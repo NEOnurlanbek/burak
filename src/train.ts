@@ -1,12 +1,40 @@
  console.log("ishga tushdi tushyapti");
+// ZH -task
+
+ function findDisappearedNumbers(nums: number[]): number[] {
+    const n = nums.length;
+    const result: number[] = [];
+    
+    nums.sort((a, b) => a - b);
+    
+    let expected = 1; 
+    for (let i = 0; i < n; i++) {
+        const current = nums[i];
+        while (expected < current) {
+            result.push(expected); 
+            expected++;
+        }
+        expected = current + 1; 
+    }
+    
+    while (expected <= n) {
+        result.push(expected); 
+        expected++;
+    }
+    
+    return result;
+}
+console.log(findDisappearedNumbers([1, 3, 4, 7])); 
+
+
 //ZG-TASK:
 
-function stringToSnakeCase(input: string): string {
-    return input.toLowerCase().replace(/\s+/g, '_');
-}
+// function stringToSnakeCase(input: string): string {
+//     return input.toLowerCase().replace(/\s+/g, '_');
+// }
 
-console.log(stringToSnakeCase('name should be a string'));
-console.log(stringToSnakeCase('This is a Test String')); 
+// console.log(stringToSnakeCase('name should be a string'));
+// console.log(stringToSnakeCase('This is a Test String')); 
 
 
  //ZF-TASK:
