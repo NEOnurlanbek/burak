@@ -1,30 +1,45 @@
  console.log("ishga tushdi tushyapti");
+
+//ZI -task
+
+function delayHelloWorld(): string {
+    const delay = 3000; 
+    const start = Date.now(); 
+    while (Date.now() - start < delay) {
+
+    }
+    return "Hello World";
+}
+
+console.log(delayHelloWorld()); 
+
+
 // ZH -task
 
- function findDisappearedNumbers(nums: number[]): number[] {
-    const n = nums.length;
-    const result: number[] = [];
+//  function findDisappearedNumbers(nums: number[]): number[] {
+//     const n = nums.length;
+//     const result: number[] = [];
     
-    nums.sort((a, b) => a - b);
+//     nums.sort((a, b) => a - b);
     
-    let expected = 1; 
-    for (let i = 0; i < n; i++) {
-        const current = nums[i];
-        while (expected < current) {
-            result.push(expected); 
-            expected++;
-        }
-        expected = current + 1; 
-    }
+//     let expected = 1; 
+//     for (let i = 0; i < n; i++) {
+//         const current = nums[i];
+//         while (expected < current) {
+//             result.push(expected); 
+//             expected++;
+//         }
+//         expected = current + 1; 
+//     }
     
-    while (expected <= n) {
-        result.push(expected); 
-        expected++;
-    }
+//     while (expected <= n) {
+//         result.push(expected); 
+//         expected++;
+//     }
     
-    return result;
-}
-console.log(findDisappearedNumbers([1, 3, 4, 7])); 
+//     return result;
+// }
+// console.log(findDisappearedNumbers([1, 3, 4, 7])); 
 
 
 //ZG-TASK:
