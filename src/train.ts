@@ -1,17 +1,35 @@
  console.log("ishga tushdi tushyapti");
 
-//ZI -task
+ //ZJ - task
 
-function delayHelloWorld(): string {
-    const delay = 3000; 
-    const start = Date.now(); 
-    while (Date.now() - start < delay) {
-
-    }
-    return "Hello World";
+ function reduceNestedArray(arr: (number | any)[]): number {
+    return arr.reduce((acc, curr) => {
+        if (Array.isArray(curr)) {
+            return acc + reduceNestedArray(curr); 
+        } else if (typeof curr === 'number') {
+            return acc + curr; 
+        } else {
+            return acc;
+        }
+    }, 0);
 }
 
-console.log(delayHelloWorld()); 
+
+console.log(reduceNestedArray([1, [1, 2, [4]]])); 
+
+
+//ZI -task
+
+// function delayHelloWorld(): string {
+//     const delay = 3000; 
+//     const start = Date.now(); 
+//     while (Date.now() - start < delay) {
+
+//     }
+//     return "Hello World";
+// }
+
+// console.log(delayHelloWorld()); 
 
 
 // ZH -task
