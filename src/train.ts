@@ -1,21 +1,36 @@
  console.log("ishga tushdi tushyapti");
+ // ZK - task
+
+ function printNumbers(): void {
+    let i = 1;
+    const intervalId = setInterval(() => {
+        console.log(i);
+        i++;
+        if (i > 5) {
+            clearInterval(intervalId);
+        }
+    }, 1000); 
+}
+
+// Test
+printNumbers();
 
  //ZJ - task
 
- function reduceNestedArray(arr: (number | any)[]): number {
-    return arr.reduce((acc, curr) => {
-        if (Array.isArray(curr)) {
-            return acc + reduceNestedArray(curr); 
-        } else if (typeof curr === 'number') {
-            return acc + curr; 
-        } else {
-            return acc;
-        }
-    }, 0);
-}
+//  function reduceNestedArray(arr: (number | any)[]): number {
+//     return arr.reduce((acc, curr) => {
+//         if (Array.isArray(curr)) {
+//             return acc + reduceNestedArray(curr); 
+//         } else if (typeof curr === 'number') {
+//             return acc + curr; 
+//         } else {
+//             return acc;
+//         }
+//     }, 0);
+// }
 
 
-console.log(reduceNestedArray([1, [1, 2, [4]]])); 
+// console.log(reduceNestedArray([1, [1, 2, [4]]])); 
 
 
 //ZI -task
