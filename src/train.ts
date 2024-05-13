@@ -1,19 +1,32 @@
  console.log("ishga tushdi tushyapti");
- // ZK - task
 
- function printNumbers(): void {
-    let i = 1;
-    const intervalId = setInterval(() => {
-        console.log(i);
-        i++;
-        if (i > 5) {
-            clearInterval(intervalId);
-        }
-    }, 1000); 
+//zl -task 
+function stringToKebab(str: string): string {
+    const lowercaseStr = str.toLowerCase();
+    const replacedSpaces = lowercaseStr.replace(/\s+/g, "-");
+    return replacedSpaces;
 }
 
+
+console.log(stringToKebab("I love Kebab"));
+
+
+
+ // ZK - task
+
+//  function printNumbers(): void {
+//     let i = 1;
+//     const intervalId = setInterval(() => {
+//         console.log(i);
+//         i++;
+//         if (i > 5) {
+//             clearInterval(intervalId);
+//         }
+//     }, 1000); 
+// }
+
 // Test
-printNumbers();
+// printNumbers();
 
  //ZJ - task
 
