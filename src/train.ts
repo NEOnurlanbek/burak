@@ -1,14 +1,23 @@
  console.log("ishga tushdi tushyapti");
 
-//zl -task 
-function stringToKebab(str: string): string {
-    const lowercaseStr = str.toLowerCase();
-    const replacedSpaces = lowercaseStr.replace(/\s+/g, "-");
-    return replacedSpaces;
+ //zm - task
+ function reverseInteger(num: number): number {
+    return parseInt(num.toString().split('').reverse().join(''));
 }
 
 
-console.log(stringToKebab("I love Kebab"));
+console.log(reverseInteger(123456789)); 
+
+
+//zl -task 
+// function stringToKebab(str: string): string {
+//     const lowercaseStr = str.toLowerCase();
+//     const replacedSpaces = lowercaseStr.replace(/\s+/g, "-");
+//     return replacedSpaces;
+// }
+
+
+// console.log(stringToKebab("I love Kebab"));
 
 
 
