@@ -1,12 +1,26 @@
  console.log("ishga tushdi tushyapti");
 
- //zm - task
- function reverseInteger(num: number): number {
-    return parseInt(num.toString().split('').reverse().join(''));
+ //ZN - TASK
+
+ function rotateArray(arr: any[], index: number): any[] {
+    if (index < 0 || index >= arr.length) {
+        throw new Error('Index out of bounds');
+    }
+    const part1 = arr.slice(0, index + 1);
+    const part2 = arr.slice(index + 1);
+    return part2.concat(part1);
 }
 
+console.log(rotateArray([1, 2, 3, 4, 5, 6], 3)); 
 
-console.log(reverseInteger(123456789)); 
+
+ //zm - task
+//  function reverseInteger(num: number): number {
+//     return parseInt(num.toString().split('').reverse().join(''));
+// }
+
+
+// console.log(reverseInteger(123456789)); 
 
 
 //zl -task 
