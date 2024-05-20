@@ -1,17 +1,42 @@
  console.log("ishga tushdi tushyapti");
 
- //ZN - TASK
+ //zo - task
 
- function rotateArray(arr: any[], index: number): any[] {
-    if (index < 0 || index >= arr.length) {
-        throw new Error('Index out of bounds');
+ function areParenthesesBalanced(str: string): boolean {
+    let balance = 0;
+
+    for (let char of str) {
+        if (char === '(') {
+            balance++;
+        } else if (char === ')') {
+            balance--;
+        }
+
+        if (balance < 0) {
+            return false;
+        }
     }
-    const part1 = arr.slice(0, index + 1);
-    const part2 = arr.slice(index + 1);
-    return part2.concat(part1);
+
+    return balance === 0;
 }
 
-console.log(rotateArray([1, 2, 3, 4, 5, 6], 3)); 
+// Test
+console.log(areParenthesesBalanced("string()ichida(qavslar)soni()balansda")); 
+
+
+
+ //ZN - TASK
+
+//  function rotateArray(arr: any[], index: number): any[] {
+//     if (index < 0 || index >= arr.length) {
+//         throw new Error('Index out of bounds');
+//     }
+//     const part1 = arr.slice(0, index + 1);
+//     const part2 = arr.slice(index + 1);
+//     return part2.concat(part1);
+// }
+
+// console.log(rotateArray([1, 2, 3, 4, 5, 6], 3)); 
 
 
  //zm - task
