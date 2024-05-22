@@ -1,27 +1,54 @@
  console.log("ishga tushdi tushyapti");
 
- //zo - task
+ //zp - task
 
- function areParenthesesBalanced(str: string): boolean {
-    let balance = 0;
+ function majorityElement(nums: number[]): number | null {
+    const countMap: { [key: number]: number } = {};
+    
+    for (let num of nums) {
+        countMap[num] = (countMap[num] || 0) + 1;
+    }
+    
+    let majorityElem: number | null = null;
+    let maxCount = 0;
+    
 
-    for (let char of str) {
-        if (char === '(') {
-            balance++;
-        } else if (char === ')') {
-            balance--;
-        }
-
-        if (balance < 0) {
-            return false;
+    for (let num in countMap) {
+        if (countMap[num] > maxCount) {
+            maxCount = countMap[num];
+            majorityElem = parseInt(num);
         }
     }
-
-    return balance === 0;
+    
+    return majorityElem;
 }
 
-// Test
-console.log(areParenthesesBalanced("string()ichida(qavslar)soni()balansda")); 
+
+console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4])); 
+
+
+ //zo - task
+
+//  function areParenthesesBalanced(str: string): boolean {
+//     let balance = 0;
+
+//     for (let char of str) {
+//         if (char === '(') {
+//             balance++;
+//         } else if (char === ')') {
+//             balance--;
+//         }
+
+//         if (balance < 0) {
+//             return false;
+//         }
+//     }
+
+//     return balance === 0;
+// }
+
+// // Test
+// console.log(areParenthesesBalanced("string()ichida(qavslar)soni()balansda")); 
 
 
 
