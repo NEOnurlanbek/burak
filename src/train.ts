@@ -1,30 +1,49 @@
  console.log("ishga tushdi tushyapti");
 
- //zp - task
+ //zr - task
 
- function majorityElement(nums: number[]): number | null {
-    const countMap: { [key: number]: number } = {};
-    
-    for (let num of nums) {
-        countMap[num] = (countMap[num] || 0) + 1;
-    }
-    
-    let majorityElem: number | null = null;
-    let maxCount = 0;
-    
+ function countNumberAndLetters(input: string): { number: number, letter: number } {
+    let result = { number: 0, letter: 0 };
 
-    for (let num in countMap) {
-        if (countMap[num] > maxCount) {
-            maxCount = countMap[num];
-            majorityElem = parseInt(num);
+    for (let char of input) {
+        if (/[0-9]/.test(char)) {
+            result.number++;
+        } else if (/[a-zA-Z]/.test(char)) {
+            result.letter++;
         }
     }
-    
-    return majorityElem;
+
+    return result;
 }
 
+console.log(countNumberAndLetters("string152%¥")); 
 
-console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4])); 
+
+ //zp - task
+
+//  function majorityElement(nums: number[]): number | null {
+//     const countMap: { [key: number]: number } = {};
+    
+//     for (let num of nums) {
+//         countMap[num] = (countMap[num] || 0) + 1;
+//     }
+    
+//     let majorityElem: number | null = null;
+//     let maxCount = 0;
+    
+
+//     for (let num in countMap) {
+//         if (countMap[num] > maxCount) {
+//             maxCount = countMap[num];
+//             majorityElem = parseInt(num);
+//         }
+//     }
+    
+//     return majorityElem;
+// }
+
+
+// console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4])); 
 
 
  //zo - task
