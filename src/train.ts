@@ -1,5 +1,24 @@
  console.log("ishga tushdi tushyapti");
 
+ function singleNumber(nums: number[]): number | undefined {
+    const countMap = new Map<number, number>();
+
+    for (let num of nums) {
+        countMap.set(num, (countMap.get(num) || 0) + 1);
+    }
+
+    for (let [num, count] of countMap.entries()) {
+        if (count === 1) {
+            return num;
+        }
+    }
+    return undefined;
+}
+
+console.log(singleNumber([4, 2, 1, 2, 1])); 
+        
+
+
  //zr - task
 
  function countNumberAndLetters(input: string): { number: number, letter: number } {
