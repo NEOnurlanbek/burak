@@ -1,21 +1,45 @@
  console.log("ishga tushdi tushyapti");
 
- function singleNumber(nums: number[]): number | undefined {
-    const countMap = new Map<number, number>();
+// zt-task
 
-    for (let num of nums) {
-        countMap.set(num, (countMap.get(num) || 0) + 1);
+function firstUniqueCharIndex(s: string): number {
+    const charCount: { [key: string]: number } = {};
+
+    for (let char of s) {
+        charCount[char] = (charCount[char] || 0) + 1;
     }
 
-    for (let [num, count] of countMap.entries()) {
-        if (count === 1) {
-            return num;
+    for (let i = 0; i < s.length; i++) {
+        if (charCount[s[i]] === 1) {
+            return i;
         }
     }
-    return undefined;
+
+    return -1;
 }
 
-console.log(singleNumber([4, 2, 1, 2, 1])); 
+
+console.log(firstUniqueCharIndex("stamp")); 
+
+
+
+
+//  function singleNumber(nums: number[]): number | undefined {
+//     const countMap = new Map<number, number>();
+
+//     for (let num of nums) {
+//         countMap.set(num, (countMap.get(num) || 0) + 1);
+//     }
+
+//     for (let [num, count] of countMap.entries()) {
+//         if (count === 1) {
+//             return num;
+//         }
+//     }
+//     return undefined;
+// }
+
+// console.log(singleNumber([4, 2, 1, 2, 1])); 
         
 
 
