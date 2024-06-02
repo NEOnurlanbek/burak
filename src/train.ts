@@ -1,25 +1,48 @@
  console.log("ishga tushdi tushyapti");
 
-// zt-task
+ //zu - task
 
-function firstUniqueCharIndex(s: string): number {
-    const charCount: { [key: string]: number } = {};
+ function sumOfUnique(nums: number[]): number {
+    const numCount: { [key: number]: number } = {};
 
-    for (let char of s) {
-        charCount[char] = (charCount[char] || 0) + 1;
+    for (let num of nums) {
+        numCount[num] = (numCount[num] || 0) + 1;
     }
 
-    for (let i = 0; i < s.length; i++) {
-        if (charCount[s[i]] === 1) {
-            return i;
+    let sum = 0;
+    for (let num in numCount) {
+        if (numCount[num] === 1) {
+            sum += parseInt(num);
         }
     }
 
-    return -1;
+    return sum;
 }
 
+console.log(sumOfUnique([1, 2, 3, 2]));
 
-console.log(firstUniqueCharIndex("stamp")); 
+
+
+// zt-task
+
+// function firstUniqueCharIndex(s: string): number {
+//     const charCount: { [key: string]: number } = {};
+
+//     for (let char of s) {
+//         charCount[char] = (charCount[char] || 0) + 1;
+//     }
+
+//     for (let i = 0; i < s.length; i++) {
+//         if (charCount[s[i]] === 1) {
+//             return i;
+//         }
+//     }
+
+//     return -1;
+// }
+
+
+// console.log(firstUniqueCharIndex("stamp")); 
 
 
 
