@@ -1,25 +1,49 @@
  console.log("ishga tushdi tushyapti");
 
- //zu - task
+ // zv - task
+ function moveZeroes(nums: number[]): number[] {
+    let nonZeroIndex = 0;
 
- function sumOfUnique(nums: number[]): number {
-    const numCount: { [key: number]: number } = {};
 
-    for (let num of nums) {
-        numCount[num] = (numCount[num] || 0) + 1;
-    }
-
-    let sum = 0;
-    for (let num in numCount) {
-        if (numCount[num] === 1) {
-            sum += parseInt(num);
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== 0) {
+            nums[nonZeroIndex] = nums[i];
+            nonZeroIndex++;
         }
     }
 
-    return sum;
+
+    for (let i = nonZeroIndex; i < nums.length; i++) {
+        nums[i] = 0;
+    }
+
+    return nums;
 }
 
-console.log(sumOfUnique([1, 2, 3, 2]));
+console.log(moveZeroes([0, 1, 0, 3, 12])); 
+ 
+
+
+ //zu - task
+
+//  function sumOfUnique(nums: number[]): number {
+//     const numCount: { [key: number]: number } = {};
+
+//     for (let num of nums) {
+//         numCount[num] = (numCount[num] || 0) + 1;
+//     }
+
+//     let sum = 0;
+//     for (let num in numCount) {
+//         if (numCount[num] === 1) {
+//             sum += parseInt(num);
+//         }
+//     }
+
+//     return sum;
+// }
+
+// console.log(sumOfUnique([1, 2, 3, 2]));
 
 
 
